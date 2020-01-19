@@ -7,9 +7,29 @@
 //
 
 import UIKit
-
+import Firebase
 class RegisterController: UIViewController {
 
+    @IBOutlet weak var nickNameField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBAction func registUser(_ sender: Any) {
+        print("start work")
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!){(result, error) in
+            if error == nil{
+                print(result?.user.uid ?? "228")
+            }
+            else{
+                let alert = UIAlertController(title: "Какие-то неполадки...", message: "Даныый email уже занят!", preferredStyle: .actionSheet)
+                self.present(alert, animated: true, completion: nil)
+                let action = UIAlertAction(title: "вы чмо", style: .default, handler: nil)
+                alert.addAction(action)
+            }
+            
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
