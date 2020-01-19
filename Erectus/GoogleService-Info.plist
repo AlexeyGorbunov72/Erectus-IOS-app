@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>549507409699-dk9jiraeb3c5m5omseun1qkkqjponcih.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.549507409699-dk9jiraeb3c5m5omseun1qkkqjponcih</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>549507409699-hv6ehu3bhr85h8572bdja6ao68rm02it.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAjnx2tAFNn8kX0pvE_Ca0i65wgmH9j47k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>549507409699</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>edu.Erectus</string>
+	<key>PROJECT_ID</key>
+	<string>messengererectus</string>
+	<key>STORAGE_BUCKET</key>
+	<string>messengererectus.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:549507409699:ios:5f412922a4038a967bce96</string>
+	<key>DATABASE_URL</key>
+	<string>https://messengererectus.firebaseio.com</string>
+</dict>
+</plist>
