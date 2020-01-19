@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6451C07E419C9E9546BC1AFD /* libPods-Erectus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AED771CDF5D27D86D62E11A /* libPods-Erectus.a */; };
 		CA4B9E4823D4105000C05DBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E4723D4105000C05DBD /* AppDelegate.swift */; };
 		CA4B9E4A23D4105000C05DBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E4923D4105000C05DBD /* SceneDelegate.swift */; };
-		CA4B9E4C23D4105000C05DBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E4B23D4105000C05DBD /* ViewController.swift */; };
 		CA4B9E4F23D4105000C05DBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4B9E4D23D4105000C05DBD /* Main.storyboard */; };
 		CA4B9E5123D4105400C05DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4B9E5023D4105400C05DBD /* Assets.xcassets */; };
 		CA4B9E5423D4105400C05DBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4B9E5223D4105400C05DBD /* LaunchScreen.storyboard */; };
@@ -18,6 +17,8 @@
 		CA4B9E6A23D4105400C05DBD /* ErectusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E6923D4105400C05DBD /* ErectusUITests.swift */; };
 		CA4B9E7823D4107100C05DBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA4B9E7723D4107000C05DBD /* GoogleService-Info.plist */; };
 		CA4B9E7A23D4109100C05DBD /* aaaaa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E7923D4109100C05DBD /* aaaaa.swift */; };
+		CA4B9E7C23D4153100C05DBD /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E7B23D4153100C05DBD /* LoginPageController.swift */; };
+		CA4B9E7E23D417D400C05DBD /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E7D23D417D400C05DBD /* RegisterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 		CA4B9E4423D4105000C05DBD /* Erectus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erectus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4B9E4723D4105000C05DBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA4B9E4923D4105000C05DBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CA4B9E4B23D4105000C05DBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA4B9E4E23D4105000C05DBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA4B9E5023D4105400C05DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA4B9E5323D4105400C05DBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +57,8 @@
 		CA4B9E6B23D4105400C05DBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA4B9E7723D4107000C05DBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA4B9E7923D4109100C05DBD /* aaaaa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aaaaa.swift; sourceTree = "<group>"; };
+		CA4B9E7B23D4153100C05DBD /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
+		CA4B9E7D23D417D400C05DBD /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,6 @@
 				9910005529335AD27508A028 /* Pods-Erectus.debug.xcconfig */,
 				804BD240CF5AB3E3D253E08F /* Pods-Erectus.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,12 +132,13 @@
 				CA4B9E7723D4107000C05DBD /* GoogleService-Info.plist */,
 				CA4B9E4723D4105000C05DBD /* AppDelegate.swift */,
 				CA4B9E4923D4105000C05DBD /* SceneDelegate.swift */,
-				CA4B9E4B23D4105000C05DBD /* ViewController.swift */,
 				CA4B9E4D23D4105000C05DBD /* Main.storyboard */,
 				CA4B9E5023D4105400C05DBD /* Assets.xcassets */,
 				CA4B9E5223D4105400C05DBD /* LaunchScreen.storyboard */,
 				CA4B9E5523D4105400C05DBD /* Info.plist */,
 				CA4B9E7923D4109100C05DBD /* aaaaa.swift */,
+				CA4B9E7B23D4153100C05DBD /* LoginPageController.swift */,
+				CA4B9E7D23D417D400C05DBD /* RegisterController.swift */,
 			);
 			path = Erectus;
 			sourceTree = "<group>";
@@ -335,9 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA4B9E4C23D4105000C05DBD /* ViewController.swift in Sources */,
+				CA4B9E7E23D417D400C05DBD /* RegisterController.swift in Sources */,
 				CA4B9E4823D4105000C05DBD /* AppDelegate.swift in Sources */,
 				CA4B9E4A23D4105000C05DBD /* SceneDelegate.swift in Sources */,
+				CA4B9E7C23D4153100C05DBD /* LoginPageController.swift in Sources */,
 				CA4B9E7A23D4109100C05DBD /* aaaaa.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
