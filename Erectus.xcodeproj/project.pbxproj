@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6451C07E419C9E9546BC1AFD /* libPods-Erectus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AED771CDF5D27D86D62E11A /* libPods-Erectus.a */; };
+		CA3169F323E8B0B500C35BD8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3169F223E8B0B500C35BD8 /* TestViewController.swift */; };
 		CA4B9E4823D4105000C05DBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E4723D4105000C05DBD /* AppDelegate.swift */; };
 		CA4B9E4A23D4105000C05DBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E4923D4105000C05DBD /* SceneDelegate.swift */; };
 		CA4B9E4F23D4105000C05DBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4B9E4D23D4105000C05DBD /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		CA4B9E5F23D4105400C05DBD /* ErectusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E5E23D4105400C05DBD /* ErectusTests.swift */; };
 		CA4B9E6A23D4105400C05DBD /* ErectusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E6923D4105400C05DBD /* ErectusUITests.swift */; };
 		CA4B9E7823D4107100C05DBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA4B9E7723D4107000C05DBD /* GoogleService-Info.plist */; };
-		CA4B9E7A23D4109100C05DBD /* aaaaa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E7923D4109100C05DBD /* aaaaa.swift */; };
 		CA4B9E7C23D4153100C05DBD /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E7B23D4153100C05DBD /* LoginPageController.swift */; };
 		CA4B9E7E23D417D400C05DBD /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E7D23D417D400C05DBD /* RegisterController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +42,7 @@
 		6AED771CDF5D27D86D62E11A /* libPods-Erectus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Erectus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		804BD240CF5AB3E3D253E08F /* Pods-Erectus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Erectus.release.xcconfig"; path = "Target Support Files/Pods-Erectus/Pods-Erectus.release.xcconfig"; sourceTree = "<group>"; };
 		9910005529335AD27508A028 /* Pods-Erectus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Erectus.debug.xcconfig"; path = "Target Support Files/Pods-Erectus/Pods-Erectus.debug.xcconfig"; sourceTree = "<group>"; };
+		CA3169F223E8B0B500C35BD8 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		CA4B9E4423D4105000C05DBD /* Erectus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Erectus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4B9E4723D4105000C05DBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA4B9E4923D4105000C05DBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		CA4B9E6923D4105400C05DBD /* ErectusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErectusUITests.swift; sourceTree = "<group>"; };
 		CA4B9E6B23D4105400C05DBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA4B9E7723D4107000C05DBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CA4B9E7923D4109100C05DBD /* aaaaa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aaaaa.swift; sourceTree = "<group>"; };
 		CA4B9E7B23D4153100C05DBD /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
 		CA4B9E7D23D417D400C05DBD /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,9 +136,9 @@
 				CA4B9E5023D4105400C05DBD /* Assets.xcassets */,
 				CA4B9E5223D4105400C05DBD /* LaunchScreen.storyboard */,
 				CA4B9E5523D4105400C05DBD /* Info.plist */,
-				CA4B9E7923D4109100C05DBD /* aaaaa.swift */,
 				CA4B9E7B23D4153100C05DBD /* LoginPageController.swift */,
 				CA4B9E7D23D417D400C05DBD /* RegisterController.swift */,
+				CA3169F223E8B0B500C35BD8 /* TestViewController.swift */,
 			);
 			path = Erectus;
 			sourceTree = "<group>";
@@ -337,11 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3169F323E8B0B500C35BD8 /* TestViewController.swift in Sources */,
 				CA4B9E7E23D417D400C05DBD /* RegisterController.swift in Sources */,
 				CA4B9E4823D4105000C05DBD /* AppDelegate.swift in Sources */,
 				CA4B9E4A23D4105000C05DBD /* SceneDelegate.swift in Sources */,
 				CA4B9E7C23D4153100C05DBD /* LoginPageController.swift in Sources */,
-				CA4B9E7A23D4109100C05DBD /* aaaaa.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
