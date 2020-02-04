@@ -9,9 +9,10 @@
 import UIKit
 
 class TestViewController: UIViewController {
+   
     var inputStream: InputStream!
     var outputStream: OutputStream!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var labelField: UILabel!
     
     
     func networkStuff(){
@@ -21,7 +22,7 @@ class TestViewController: UIViewController {
         
         CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
                                            "192.168.0.14" as CFString,
-                                           1488,
+                                           1490,
                                            &readStream,
                                            &writeStream)
         inputStream = readStream!.takeRetainedValue()
@@ -30,23 +31,19 @@ class TestViewController: UIViewController {
         outputStream.schedule(in: .current, forMode: .common)
         inputStream.open()
         outputStream.open()
-        DispatchQueue.global(qos: .background).async {
-                DispatchQueue.main.async {
-                    self.listenServer()
-                }
-        }
     }
 
     func listenServer(){
-        self.label.text = "ну нихуя себе..."
         while true{
-        var buffer = [UInt8](repeating: 0, count: 1024)
-        let nBytes: Int = inputStream!.read(&buffer, maxLength: buffer.count)              //Read from inStream into buffer
-        let bufferStr = NSString(bytes: &buffer, length: nBytes, encoding: String.Encoding.utf8.rawValue)
-        print(1)
-        if  bufferStr != nil{
+            var buffer = [UInt8](repeating: 0, count: 1024)
+            let nBytes: Int = inputStream!.read(&buffer, maxLength: buffer.count)              //Read from inStream into buffer
+            let bufferStr = NSString(bytes: &buffer, length: nBytes, encoding: String.Encoding.utf8.rawValue)
+            if  bufferStr != nil{
                 print("Read: " + (bufferStr! as String))
-            self.label.text = bufferStr! as String
+                DispatchQueue.main.async { // Correct
+                    self.labelField.text = bufferStr! as String
+            }
+                
         }
         }
     }
@@ -54,6 +51,10 @@ class TestViewController: UIViewController {
         super.viewDidLoad()
         networkStuff()
         print(228)
+        self.labelField.text = "смерть жидам"
+        DispatchQueue.main.async {
+            self.listenServer()
+        }
     }
     
 
