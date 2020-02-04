@@ -22,7 +22,7 @@ class TestViewController: UIViewController {
         
         CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
                                            "192.168.0.14" as CFString,
-                                           1490,
+                                           1494,
                                            &readStream,
                                            &writeStream)
         inputStream = readStream!.takeRetainedValue()
@@ -34,15 +34,23 @@ class TestViewController: UIViewController {
     }
 
     func listenServer(){
+        print(3)
         while true{
+            print(555)
             var buffer = [UInt8](repeating: 0, count: 1024)
             let nBytes: Int = inputStream!.read(&buffer, maxLength: buffer.count)              //Read from inStream into buffer
             let bufferStr = NSString(bytes: &buffer, length: nBytes, encoding: String.Encoding.utf8.rawValue)
+            
+            let 💩 = "💩"
+            //print(💩)
+            print(1)
+
             if  bufferStr != nil{
                 print("Read: " + (bufferStr! as String))
-                DispatchQueue.main.async { // Correct
-                    self.labelField.text = bufferStr! as String
-            }
+                DispatchQueue.main.async {
+                        self.labelField.text = bufferStr! as String
+                }
+                
                 
         }
         }
@@ -52,9 +60,10 @@ class TestViewController: UIViewController {
         networkStuff()
         print(228)
         self.labelField.text = "смерть жидам"
-        DispatchQueue.main.async {
-            self.listenServer()
-        }
+        DispatchQueue.global(qos: .userInteractive).async{
+                self.listenServer()
+            }
+        
     }
     
 
