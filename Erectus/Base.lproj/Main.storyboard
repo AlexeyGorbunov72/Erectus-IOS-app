@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QZW-7q-aiD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gMm-Mi-egz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -113,18 +113,56 @@
         <!--Item 1-->
         <scene sceneID="XXj-1N-lSC">
             <objects>
-                <viewController id="8dk-4x-rFW" sceneMemberID="viewController">
+                <viewController id="8dk-4x-rFW" customClass="ChatBoardViewController" customModule="Erectus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mAQ-U1-zXB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2Wb-9M-6Gb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIndentifer" textLabel="V9s-xr-UDs" style="IBUITableViewCellStyleDefault" id="y0c-NN-8Oy">
+                                        <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y0c-NN-8Oy" id="XgT-pB-p24">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V9s-xr-UDs">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8dk-4x-rFW" id="xM2-ae-heT"/>
+                                    <outlet property="delegate" destination="8dk-4x-rFW" id="gng-VN-4gg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2Wb-9M-6Gb" firstAttribute="top" secondItem="670-aR-rcL" secondAttribute="top" id="2r0-6A-Xiv"/>
+                            <constraint firstItem="670-aR-rcL" firstAttribute="trailing" secondItem="2Wb-9M-6Gb" secondAttribute="trailing" id="My9-7g-QgA"/>
+                            <constraint firstItem="2Wb-9M-6Gb" firstAttribute="centerX" secondItem="mAQ-U1-zXB" secondAttribute="centerX" id="Xvv-o8-FXa"/>
+                            <constraint firstItem="670-aR-rcL" firstAttribute="bottom" secondItem="2Wb-9M-6Gb" secondAttribute="bottom" id="t6B-iz-eqx"/>
+                            <constraint firstItem="2Wb-9M-6Gb" firstAttribute="leading" secondItem="670-aR-rcL" secondAttribute="leading" id="wuC-bi-a7n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="670-aR-rcL"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="luk-Ew-mME"/>
+                    <connections>
+                        <outlet property="chatBoard" destination="2Wb-9M-6Gb" id="uGv-h9-uEW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ge1-7l-lpd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="-251"/>
+            <point key="canvasLocation" x="597.10144927536237" y="-251.11607142857142"/>
         </scene>
         <!--Register Controller-->
         <scene sceneID="Fej-Zo-HiD">
