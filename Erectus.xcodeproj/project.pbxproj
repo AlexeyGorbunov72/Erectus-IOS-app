@@ -23,6 +23,7 @@
 		CA9278F523F0C87E000BF2C0 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9278F423F0C87E000BF2C0 /* ChatRoomViewController.swift */; };
 		CA9278F723F0C895000BF2C0 /* ChatMessagesFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */; };
 		CA9278F923F0C8D0000BF2C0 /* ChatMessagesYour.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */; };
+		CAE1EF1D23F12EC60090D140 /* MessageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1EF1C23F12EC60090D140 /* MessageClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesFrom.swift; sourceTree = "<group>"; };
 		CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesYour.swift; sourceTree = "<group>"; };
 		CA9278FF23F0E7D8000BF2C0 /* Erectus-IOS.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Erectus-IOS.db"; path = "../../Erectus-IOS.db"; sourceTree = "<group>"; };
+		CAE1EF1C23F12EC60090D140 /* MessageClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				CA9278F423F0C87E000BF2C0 /* ChatRoomViewController.swift */,
 				CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */,
 				CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */,
+				CAE1EF1C23F12EC60090D140 /* MessageClass.swift */,
 			);
 			path = Erectus;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				CA0E1D1023E9FD7A006460D1 /* ChatBoardViewController.swift in Sources */,
 				CA9278F723F0C895000BF2C0 /* ChatMessagesFrom.swift in Sources */,
 				CA4B9E4A23D4105000C05DBD /* SceneDelegate.swift in Sources */,
+				CAE1EF1D23F12EC60090D140 /* MessageClass.swift in Sources */,
 				CA4B9E7C23D4153100C05DBD /* LoginPageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
