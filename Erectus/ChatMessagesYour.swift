@@ -12,7 +12,7 @@ class ChatMessgesYour: UITableViewCell{
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = .clear
-        bubbleBackgroundView.layer.cornerRadius = 20
+        bubbleBackgroundView.layer.cornerRadius = 23
         addSubview(bubbleBackgroundView)
         addSubview(messageLabel)
         bubbleBackgroundView.backgroundColor = .yellow

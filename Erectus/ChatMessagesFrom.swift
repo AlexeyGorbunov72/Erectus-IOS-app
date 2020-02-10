@@ -19,7 +19,7 @@ class ChatMessageFrom : UITableViewCell{
         addSubview(messageLabel)
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         bubbleView.translatesAutoresizingMaskIntoConstraints = false
-        bubbleView.layer.cornerRadius = 20
+        bubbleView.layer.cornerRadius = 23
         bubbleView.backgroundColor = .magenta
         messageLabel.numberOfLines = 0
         
