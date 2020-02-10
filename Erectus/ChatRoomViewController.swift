@@ -14,8 +14,8 @@ class ChatRoomViewController: UIViewController, UITableViewDelegate, UITableView
    
     let chatCellYour = "yourCell"
     let chatCellFrom = "fromCell"
-    //let messages = [String]()
-    
+    let messages_ = [["12121212", 1], ["13123213213213 234 ", 0]]
+    var db : Connection?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,17 +23,27 @@ class ChatRoomViewController: UIViewController, UITableViewDelegate, UITableView
             .documentDirectory, .userDomainMask, true
         ).first!
 
-        do {let db = try Connection("\(path)/Erectus-IOS.db")
+        do {
+            db = try Connection("\(path)/Erectus-IOS.db")
 
         }catch{
-            let db = nil
+            db = nil
         }
         
         
         let messages = Table("messages")
-        for user in try db?.prepare(messages) {
-        print("from: \(user[from]), text: \(user[text])")
+        messages.insert()
+        
+            do{
+                for message in (try db?.prepare(messages))!{
+            
+            print("YAS")
         }
+            
+            }catch{
+                print("idk")
+            }
+        
         
         tableView.register(ChatMessgesYour.self, forCellReuseIdentifier: chatCellYour)
         tableView.register(ChatMessageFrom.self, forCellReuseIdentifier: chatCellFrom)
@@ -43,12 +53,12 @@ class ChatRoomViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
+        return messages_.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: chatCellFrom, for: indexPath) as! ChatMessageFrom
-        cell.messageLabel.text = messages[indexPath.row][0] as? String
+        cell.messageLabel.text = messages_[indexPath.row][0] as? String
         
         return cell
     }
