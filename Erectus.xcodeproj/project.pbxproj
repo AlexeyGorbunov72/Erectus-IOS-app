@@ -20,6 +20,9 @@
 		CA4B9E7823D4107100C05DBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA4B9E7723D4107000C05DBD /* GoogleService-Info.plist */; };
 		CA4B9E7C23D4153100C05DBD /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E7B23D4153100C05DBD /* LoginPageController.swift */; };
 		CA4B9E7E23D417D400C05DBD /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E7D23D417D400C05DBD /* RegisterController.swift */; };
+		CA9278F523F0C87E000BF2C0 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9278F423F0C87E000BF2C0 /* ChatRoomViewController.swift */; };
+		CA9278F723F0C895000BF2C0 /* ChatMessagesFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */; };
+		CA9278F923F0C8D0000BF2C0 /* ChatMessagesYour.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,10 @@
 		CA4B9E7723D4107000C05DBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA4B9E7B23D4153100C05DBD /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
 		CA4B9E7D23D417D400C05DBD /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		CA9278F423F0C87E000BF2C0 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesFrom.swift; sourceTree = "<group>"; };
+		CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesYour.swift; sourceTree = "<group>"; };
+		CA9278FF23F0E7D8000BF2C0 /* Erectus-IOS.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Erectus-IOS.db"; path = "../../Erectus-IOS.db"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +138,7 @@
 		CA4B9E4623D4105000C05DBD /* Erectus */ = {
 			isa = PBXGroup;
 			children = (
+				CA9278FF23F0E7D8000BF2C0 /* Erectus-IOS.db */,
 				CA4B9E7723D4107000C05DBD /* GoogleService-Info.plist */,
 				CA4B9E4723D4105000C05DBD /* AppDelegate.swift */,
 				CA4B9E4923D4105000C05DBD /* SceneDelegate.swift */,
@@ -142,6 +150,9 @@
 				CA4B9E7D23D417D400C05DBD /* RegisterController.swift */,
 				CA3169F223E8B0B500C35BD8 /* TestViewController.swift */,
 				CA0E1D0F23E9FD7A006460D1 /* ChatBoardViewController.swift */,
+				CA9278F423F0C87E000BF2C0 /* ChatRoomViewController.swift */,
+				CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */,
+				CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */,
 			);
 			path = Erectus;
 			sourceTree = "<group>";
@@ -340,10 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9278F923F0C8D0000BF2C0 /* ChatMessagesYour.swift in Sources */,
+				CA9278F523F0C87E000BF2C0 /* ChatRoomViewController.swift in Sources */,
 				CA3169F323E8B0B500C35BD8 /* TestViewController.swift in Sources */,
 				CA4B9E7E23D417D400C05DBD /* RegisterController.swift in Sources */,
 				CA4B9E4823D4105000C05DBD /* AppDelegate.swift in Sources */,
 				CA0E1D1023E9FD7A006460D1 /* ChatBoardViewController.swift in Sources */,
+				CA9278F723F0C895000BF2C0 /* ChatMessagesFrom.swift in Sources */,
 				CA4B9E4A23D4105000C05DBD /* SceneDelegate.swift in Sources */,
 				CA4B9E7C23D4153100C05DBD /* LoginPageController.swift in Sources */,
 			);
