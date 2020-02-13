@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+
 class RegisterController: UIViewController {
 
     @IBOutlet weak var nickNameField: UITextField!

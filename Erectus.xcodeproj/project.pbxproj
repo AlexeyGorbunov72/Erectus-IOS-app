@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6451C07E419C9E9546BC1AFD /* libPods-Erectus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AED771CDF5D27D86D62E11A /* libPods-Erectus.a */; };
+		BC6051109AFE877F1898262C /* Pods_Erectus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078D94EB5014B93587FD71C9 /* Pods_Erectus.framework */; };
 		CA0E1D1023E9FD7A006460D1 /* ChatBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0E1D0F23E9FD7A006460D1 /* ChatBoardViewController.swift */; };
 		CA3169F323E8B0B500C35BD8 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3169F223E8B0B500C35BD8 /* TestViewController.swift */; };
 		CA4B9E4823D4105000C05DBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4B9E4723D4105000C05DBD /* AppDelegate.swift */; };
@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6AED771CDF5D27D86D62E11A /* libPods-Erectus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Erectus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		078D94EB5014B93587FD71C9 /* Pods_Erectus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Erectus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		804BD240CF5AB3E3D253E08F /* Pods-Erectus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Erectus.release.xcconfig"; path = "Target Support Files/Pods-Erectus/Pods-Erectus.release.xcconfig"; sourceTree = "<group>"; };
 		9910005529335AD27508A028 /* Pods-Erectus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Erectus.debug.xcconfig"; path = "Target Support Files/Pods-Erectus/Pods-Erectus.debug.xcconfig"; sourceTree = "<group>"; };
 		CA0E1D0F23E9FD7A006460D1 /* ChatBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBoardViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6451C07E419C9E9546BC1AFD /* libPods-Erectus.a in Frameworks */,
+				BC6051109AFE877F1898262C /* Pods_Erectus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +110,7 @@
 		8FCFC847C58427AF98324E1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6AED771CDF5D27D86D62E11A /* libPods-Erectus.a */,
+				078D94EB5014B93587FD71C9 /* Pods_Erectus.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 				CA4B9E4023D4105000C05DBD /* Sources */,
 				CA4B9E4123D4105000C05DBD /* Frameworks */,
 				CA4B9E4223D4105000C05DBD /* Resources */,
-				ACB9C6C955C60EF6F4A5C2BF /* [CP] Copy Pods Resources */,
+				3E5604A2F38D47ED632FD984 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,6 +308,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3E5604A2F38D47ED632FD984 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Erectus/Pods-Erectus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Erectus/Pods-Erectus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Erectus/Pods-Erectus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A36221A8DFBD7E6573F5651E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,23 +345,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ACB9C6C955C60EF6F4A5C2BF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Erectus/Pods-Erectus-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Erectus/Pods-Erectus-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Erectus/Pods-Erectus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

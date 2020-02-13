@@ -7,9 +7,26 @@
 //
 
 import UIKit
+import RealmSwift
+
+class MessageModel: Object{
+    @objc dynamic var text = ""
+    @objc dynamic var dataTime = ""
+    @objc dynamic var fromEmail = ""
+    @objc dynamic var fromNick  = ""
+    @objc dynamic var chatId = ""
+    @objc dynamic var isIncoming  = true
+}
+
+class PersonInChatRoomModel: Object{
+    @objc dynamic var lastMessage = ""
+    @objc dynamic var countOfUnreadMessages = 0
+    @objc dynamic var dataTimeLastMessage = ""
+    @objc dynamic var chatId = ""
+}
 
 class TestViewController: UIViewController {
-   
+    var realm = try! Realm()
     var inputStream: InputStream!
     var outputStream: OutputStream!
     @IBOutlet weak var labelField: UILabel!
@@ -32,7 +49,33 @@ class TestViewController: UIViewController {
         inputStream.open()
         outputStream.open()
     }
-
+    func greatUpdater(){
+        var inc = 0;
+        while true{
+            inc += 1
+            sleep(1)
+            try! realm.write {
+                let newPerson = PersonInChatRoomModel()
+                newPerson.lastMessage = String(inc)
+                realm.add(newPerson)
+            }
+        }
+    }
+    func greatChecker(){
+        let check = realm.objects(PersonInChatRoomModel.self)
+        var inc_ = 0;
+        while true{
+            inc_ = 0;
+            sleep(1)
+            print("------------___---__")
+            print(check.count)
+            
+            for shit in check{
+                inc_ += 1
+                print(inc_,": ", shit.lastMessage)
+            }
+        }
+    }
     func listenServer(){
         print(3)
         while true{
@@ -57,12 +100,16 @@ class TestViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkStuff()
-        print(228)
-        self.labelField.text = "смерть жидам"
-        DispatchQueue.global(qos: .userInteractive).async{
-                self.listenServer()
-            }
+        print(1212)
+        try! realm.write {
+            let newPerson = PersonInChatRoomModel()
+            newPerson.lastMessage = "121212"
+            realm.add(newPerson)
+        }
+
+        let check = realm.objects(PersonInChatRoomModel.self)
+        print(check.count)
+        //realm.delete(check)
         
     }
     
