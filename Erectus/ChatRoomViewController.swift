@@ -7,55 +7,34 @@
 //
 
 import UIKit
-import SQLite
+import RealmSwift
 class ChatRoomViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let realm = try! Realm()
+    var thisChatId = "228"
+    
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var topBar: UINavigationBar!
     
     let chatCellYour = "yourCell"
     let chatCellFrom = "fromCell"
-    let messages_ = [["12121212", 1], ["13123213213213 234 ", 0]]
-    let messages__ = [Message.init(text_: "sasasas as kjdsbf j", dataTime_: "", fromEmail_: "fe fwef ", fromNick_: "dsvjv wvl", chatId_: "121212", isIncoming_: false), Message.init(text_: "fuck fuck fuck fuck fuck fuck fuck fuck fuck fuck fuck fuck fuck ", dataTime_: "", fromEmail_: "", fromNick_: "", chatId_: "", isIncoming_: true), Message.init(text_: "похуй похуй похуй похуй похуй похуй похуй похуй похуй похуй похуй похуй похуй похуй ", dataTime_: "", fromEmail_: "", fromNick_: "", chatId_: "", isIncoming_: false)]
-    var db : Connection?
+   
+    var messages__ = [Message]()
+    
+    @IBOutlet weak var textField: UITextField!
+    @IBAction func tapButtom(_ sender: Any) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let path = NSSearchPathForDirectoriesInDomains(
-            .documentDirectory, .userDomainMask, true
-        ).first!
-
-        do {
-            db = try Connection("\(path)/Erectus-IOS.db")
-
-        }catch{
-            db = nil
-            print("Data base is not found!")
-        }
-        if db != nil{
-            print("Data base is found!")
-        }
-        /*
-        guard let stmt = try? db?.prepare("SELECT * FROM messages") else{
-            print("Error in SQL-request!")
-            return
-        }
-        
-        
-        /*
-        for row in stmt! {
-            print("\(row[0]!)||\(row[1]!)")
-        }
- */
- */
-            
-        
-        
-        
+        //self.bufferMessages = realm.objects(MessageModel.self).filter("chatId == '\(self.thisChatId)'")
         tableView.register(ChatMessgesYour.self, forCellReuseIdentifier: chatCellYour)
         tableView.register(ChatMessageFrom.self, forCellReuseIdentifier: chatCellFrom)
         tableView.separatorStyle = .none
-        topBar.largeContentTitle = "messages from: " + messages__[0].fromNick
+        DispatchQueue.global().async {
+            self.addData()
+        }
+        
     }
     
     
@@ -64,23 +43,23 @@ class ChatRoomViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if messages__[indexPath.row].isIncoming == true{
+        if self.messages__[indexPath.row].isIncoming == true{
             let cell = tableView.dequeueReusableCell(withIdentifier: chatCellFrom, for: indexPath) as! ChatMessageFrom
-            cell.messageLabel.text = messages__[indexPath.row].text as? String
+            cell.messageLabel.text = messages__[indexPath.row].text as String
         
             return cell
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: chatCellYour, for: indexPath) as! ChatMessgesYour
-            cell.messageLabel.text = messages__[indexPath.row].text as? String
+            cell.messageLabel.text = messages__[indexPath.row].text as String
                    
             return cell
         }
     }
-    
-
-    
-    
-
-
+    func addData(){
+        DispatchQueue.main.async {
+            self.messages__ += [Message.init(text_: "TEST", dataTime_: "", fromEmail_: "", fromNick_: "", chatId_: "228", isIncoming_: true)]
+            self.tableView.reloadData()
+        }
+    }
 }

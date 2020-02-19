@@ -9,21 +9,6 @@
 import UIKit
 import RealmSwift
 
-class MessageModel: Object{
-    @objc dynamic var text = ""
-    @objc dynamic var dataTime = ""
-    @objc dynamic var fromEmail = ""
-    @objc dynamic var fromNick  = ""
-    @objc dynamic var chatId = ""
-    @objc dynamic var isIncoming  = true
-}
-
-class PersonInChatRoomModel: Object{
-    @objc dynamic var lastMessage = ""
-    @objc dynamic var countOfUnreadMessages = 0
-    @objc dynamic var dataTimeLastMessage = ""
-    @objc dynamic var chatId = ""
-}
 
 class TestViewController: UIViewController {
     var realm = try! Realm()
@@ -109,6 +94,7 @@ class TestViewController: UIViewController {
 
         let check = realm.objects(PersonInChatRoomModel.self)
         print(check.count)
+        print(check[0].lastMessage)
         //realm.delete(check)
         
     }
