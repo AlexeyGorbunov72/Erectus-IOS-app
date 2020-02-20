@@ -7,9 +7,10 @@
 //
 
 import UIKit
-import RealmSwift
-class ChatRoomViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let realm = try! Realm()
+import CoreData
+class ChatRoomViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var navigationBar: UINavigationBar!
     var thisChatId = "228"
     
     @IBOutlet weak var tableView: UITableView!
@@ -19,47 +20,88 @@ class ChatRoomViewController: UIViewController, UITableViewDelegate, UITableView
     let chatCellYour = "yourCell"
     let chatCellFrom = "fromCell"
    
-    var messages__ = [Message]()
-    
+    var messages = [Message]()
     @IBOutlet weak var textField: UITextField!
     @IBAction func tapButtom(_ sender: Any) {
+      
         
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        tableView.setContentOffset(CGPoint(x: 0,y: 0), animated: true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.bufferMessages = realm.objects(MessageModel.self).filter("chatId == '\(self.thisChatId)'")
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let messages_ = NSEntityDescription.entity(forEntityName: "Messages", in: context)
+        
+        let newMessage = NSManagedObject(entity: messages_!, insertInto: context)
+        
+        newMessage.setValue("хто бля сперма собаки?", forKey: "text")
+        newMessage.setValue("228", forKey: "chatId")
+        newMessage.setValue(false, forKey: "isIncoming")
+        do{
+            try context.save()
+            print("ну тип сохранил вроде")
+        }catch{
+            
+        }
+        self.getData()
+        print("len: ")
+        print(messages.count)
         tableView.register(ChatMessgesYour.self, forCellReuseIdentifier: chatCellYour)
         tableView.register(ChatMessageFrom.self, forCellReuseIdentifier: chatCellFrom)
         tableView.separatorStyle = .none
-        DispatchQueue.global().async {
-            self.addData()
-        }
+        
         
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages__.count
+        
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if self.messages__[indexPath.row].isIncoming == true{
+        if self.messages[indexPath.row].isIncoming == true{
             let cell = tableView.dequeueReusableCell(withIdentifier: chatCellFrom, for: indexPath) as! ChatMessageFrom
-            cell.messageLabel.text = messages__[indexPath.row].text as String
+            cell.messageLabel.text = messages[indexPath.row].text as String
         
             return cell
+ 
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: chatCellYour, for: indexPath) as! ChatMessgesYour
-            cell.messageLabel.text = messages__[indexPath.row].text as String
+            cell.messageLabel.text = messages[indexPath.row].text as String
                    
             return cell
         }
+ 
     }
     func addData(){
         DispatchQueue.main.async {
-            self.messages__ += [Message.init(text_: "TEST", dataTime_: "", fromEmail_: "", fromNick_: "", chatId_: "228", isIncoming_: true)]
             self.tableView.reloadData()
         }
     }
+ 
+       
+
+    func getData(){
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Messages")
+        request.returnsObjectsAsFaults = false
+        request.predicate = NSPredicate(format: "chatId == '228'" )
+        do{
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject]{
+                messages += [Message.init(text_: data.value(forKey: "text") as! String, dataTime_: "", fromEmail_: "", fromNick_: "", chatId_: "228", isIncoming_: data.value(forKey: "isIncoming") as! Bool)]
+            }
+        }catch{
+            print("бля")
+        }
+    }
 }
+

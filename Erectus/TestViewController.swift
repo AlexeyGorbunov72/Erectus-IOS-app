@@ -8,10 +8,10 @@
 
 import UIKit
 import RealmSwift
-
+import CoreData
 
 class TestViewController: UIViewController {
-    var realm = try! Realm()
+
     var inputStream: InputStream!
     var outputStream: OutputStream!
     @IBOutlet weak var labelField: UILabel!
@@ -34,33 +34,7 @@ class TestViewController: UIViewController {
         inputStream.open()
         outputStream.open()
     }
-    func greatUpdater(){
-        var inc = 0;
-        while true{
-            inc += 1
-            sleep(1)
-            try! realm.write {
-                let newPerson = PersonInChatRoomModel()
-                newPerson.lastMessage = String(inc)
-                realm.add(newPerson)
-            }
-        }
-    }
-    func greatChecker(){
-        let check = realm.objects(PersonInChatRoomModel.self)
-        var inc_ = 0;
-        while true{
-            inc_ = 0;
-            sleep(1)
-            print("------------___---__")
-            print(check.count)
-            
-            for shit in check{
-                inc_ += 1
-                print(inc_,": ", shit.lastMessage)
-            }
-        }
-    }
+    
     func listenServer(){
         print(3)
         while true{
@@ -85,17 +59,6 @@ class TestViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(1212)
-        try! realm.write {
-            let newPerson = PersonInChatRoomModel()
-            newPerson.lastMessage = "121212"
-            realm.add(newPerson)
-        }
-
-        let check = realm.objects(PersonInChatRoomModel.self)
-        print(check.count)
-        print(check[0].lastMessage)
-        //realm.delete(check)
         
     }
     

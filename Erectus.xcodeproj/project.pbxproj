@@ -23,9 +23,11 @@
 		CA9278F523F0C87E000BF2C0 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9278F423F0C87E000BF2C0 /* ChatRoomViewController.swift */; };
 		CA9278F723F0C895000BF2C0 /* ChatMessagesFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */; };
 		CA9278F923F0C8D0000BF2C0 /* ChatMessagesYour.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */; };
-		CAD46F6A23FD944A0098FF34 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD46F6923FD944A0098FF34 /* Models.swift */; };
 		CAD46F6C23FD94C60098FF34 /* DownlodaerMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD46F6B23FD94C60098FF34 /* DownlodaerMessages.swift */; };
 		CAD46F6E23FDA8520098FF34 /* SupporterForMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD46F6D23FDA8520098FF34 /* SupporterForMessage.swift */; };
+		CAD46F7123FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CAD46F6F23FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodeld */; };
+		CAD46F7323FF38CF0098FF34 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD46F7223FF38CF0098FF34 /* MessageModel.swift */; };
+		CAD46F7523FF38E70098FF34 /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD46F7423FF38E70098FF34 /* FriendsModel.swift */; };
 		CAE1EF1D23F12EC60090D140 /* MessageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1EF1C23F12EC60090D140 /* MessageClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,9 +74,11 @@
 		CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesFrom.swift; sourceTree = "<group>"; };
 		CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesYour.swift; sourceTree = "<group>"; };
 		CA9278FF23F0E7D8000BF2C0 /* Erectus-IOS.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Erectus-IOS.db"; path = "../../Erectus-IOS.db"; sourceTree = "<group>"; };
-		CAD46F6923FD944A0098FF34 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		CAD46F6B23FD94C60098FF34 /* DownlodaerMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownlodaerMessages.swift; sourceTree = "<group>"; };
 		CAD46F6D23FDA8520098FF34 /* SupporterForMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupporterForMessage.swift; sourceTree = "<group>"; };
+		CAD46F7023FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataMessagesModel.xcdatamodel; sourceTree = "<group>"; };
+		CAD46F7223FF38CF0098FF34 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		CAD46F7423FF38E70098FF34 /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		CAE1EF1C23F12EC60090D140 /* MessageClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,9 +166,11 @@
 				CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */,
 				CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */,
 				CAE1EF1C23F12EC60090D140 /* MessageClass.swift */,
-				CAD46F6923FD944A0098FF34 /* Models.swift */,
 				CAD46F6B23FD94C60098FF34 /* DownlodaerMessages.swift */,
 				CAD46F6D23FDA8520098FF34 /* SupporterForMessage.swift */,
+				CAD46F6F23FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodeld */,
+				CAD46F7223FF38CF0098FF34 /* MessageModel.swift */,
+				CAD46F7423FF38E70098FF34 /* FriendsModel.swift */,
 			);
 			path = Erectus;
 			sourceTree = "<group>";
@@ -364,14 +370,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD46F6E23FDA8520098FF34 /* SupporterForMessage.swift in Sources */,
-				CAD46F6A23FD944A0098FF34 /* Models.swift in Sources */,
 				CA9278F923F0C8D0000BF2C0 /* ChatMessagesYour.swift in Sources */,
 				CA9278F523F0C87E000BF2C0 /* ChatRoomViewController.swift in Sources */,
+				CAD46F7123FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodeld in Sources */,
 				CA3169F323E8B0B500C35BD8 /* TestViewController.swift in Sources */,
 				CA4B9E7E23D417D400C05DBD /* RegisterController.swift in Sources */,
 				CA4B9E4823D4105000C05DBD /* AppDelegate.swift in Sources */,
 				CA0E1D1023E9FD7A006460D1 /* ChatBoardViewController.swift in Sources */,
+				CAD46F7523FF38E70098FF34 /* FriendsModel.swift in Sources */,
 				CA9278F723F0C895000BF2C0 /* ChatMessagesFrom.swift in Sources */,
+				CAD46F7323FF38CF0098FF34 /* MessageModel.swift in Sources */,
 				CA4B9E4A23D4105000C05DBD /* SceneDelegate.swift in Sources */,
 				CAE1EF1D23F12EC60090D140 /* MessageClass.swift in Sources */,
 				CAD46F6C23FD94C60098FF34 /* DownlodaerMessages.swift in Sources */,
@@ -706,6 +714,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CAD46F6F23FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CAD46F7023FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodel */,
+			);
+			currentVersion = CAD46F7023FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodel */;
+			path = CoreDataMessagesModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CA4B9E3C23D4105000C05DBD /* Project object */;
 }
