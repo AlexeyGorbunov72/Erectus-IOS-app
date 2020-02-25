@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G1012" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Friend" representedClassName="Friend" syncable="YES" codeGenerationType="class">
+        <attribute name="chatID" optional="YES" attributeType="String"/>
         <attribute name="countUnreadMessages" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="dateTimeLastMessage" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="fromUID" optional="YES" attributeType="String"/>
@@ -13,11 +14,12 @@
         <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="fromEmail" optional="YES" attributeType="String"/>
         <attribute name="fromUID" optional="YES" attributeType="String"/>
+        <attribute name="isHandle" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isIncoming" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="text" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Friend" positionX="-54" positionY="27" width="128" height="133"/>
-        <element name="Messages" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Friend" positionX="-54" positionY="27" width="128" height="148"/>
+        <element name="Messages" positionX="-63" positionY="-18" width="128" height="148"/>
     </elements>
 </model>
