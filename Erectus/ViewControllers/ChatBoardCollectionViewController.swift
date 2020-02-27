@@ -16,7 +16,7 @@ class ChatBoardCollectionViewController: UICollectionViewController, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        print(1)
         getData()
         navigationItem.title = "Хуесосы бля"
         collectionView.alwaysBounceVertical = true
@@ -65,7 +65,6 @@ class ChatBoardCollectionViewController: UICollectionViewController, UICollectio
                 createTestPerson()
             }
             for date in result as! [NSManagedObject]{
-                print("блять")
                 print(date.value(forKey: "chatID"))
                 if date.value(forKey: "dateTimeLastMessage") == nil{
                     continue
