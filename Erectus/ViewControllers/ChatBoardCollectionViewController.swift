@@ -16,7 +16,6 @@ class ChatBoardCollectionViewController: UICollectionViewController, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(1)
         getData()
         navigationItem.title = "Хуесосы бля"
         collectionView.alwaysBounceVertical = true
