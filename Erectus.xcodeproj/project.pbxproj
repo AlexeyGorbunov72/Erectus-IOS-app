@@ -28,10 +28,10 @@
 		CA9278F923F0C8D0000BF2C0 /* ChatMessagesYour.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */; };
 		CAA78BAA2405B84F00A3822D /* FriendClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA78BA92405B84F00A3822D /* FriendClass.swift */; };
 		CAA78BAC2405CED100A3822D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA78BAB2405CED100A3822D /* TabBarViewController.swift */; };
-		CAD46F6C23FD94C60098FF34 /* DownlodaerMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD46F6B23FD94C60098FF34 /* DownlodaerMessages.swift */; };
-		CAD46F6E23FDA8520098FF34 /* SupporterForMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD46F6D23FDA8520098FF34 /* SupporterForMessage.swift */; };
+		CAA78BB3240649FC00A3822D /* FriendCellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA78BB2240649FC00A3822D /* FriendCellClass.swift */; };
+		CAA78BB5240666F500A3822D /* ChatBoardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA78BB4240666F500A3822D /* ChatBoardCollectionViewController.swift */; };
+		CAA78BB724066B3900A3822D /* FriendCellCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA78BB624066B3900A3822D /* FriendCellCollection.swift */; };
 		CAD46F7123FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CAD46F6F23FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodeld */; };
-		CAD46F7323FF38CF0098FF34 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD46F7223FF38CF0098FF34 /* MessageModel.swift */; };
 		CAE1EF1D23F12EC60090D140 /* MessageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE1EF1C23F12EC60090D140 /* MessageClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,13 +80,12 @@
 		CA9278F423F0C87E000BF2C0 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesFrom.swift; sourceTree = "<group>"; };
 		CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessagesYour.swift; sourceTree = "<group>"; };
-		CA9278FF23F0E7D8000BF2C0 /* Erectus-IOS.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Erectus-IOS.db"; path = "../../Erectus-IOS.db"; sourceTree = "<group>"; };
 		CAA78BA92405B84F00A3822D /* FriendClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendClass.swift; sourceTree = "<group>"; };
 		CAA78BAB2405CED100A3822D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		CAD46F6B23FD94C60098FF34 /* DownlodaerMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownlodaerMessages.swift; sourceTree = "<group>"; };
-		CAD46F6D23FDA8520098FF34 /* SupporterForMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupporterForMessage.swift; sourceTree = "<group>"; };
+		CAA78BB2240649FC00A3822D /* FriendCellClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellClass.swift; sourceTree = "<group>"; };
+		CAA78BB4240666F500A3822D /* ChatBoardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBoardCollectionViewController.swift; sourceTree = "<group>"; };
+		CAA78BB624066B3900A3822D /* FriendCellCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellCollection.swift; sourceTree = "<group>"; };
 		CAD46F7023FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataMessagesModel.xcdatamodel; sourceTree = "<group>"; };
-		CAD46F7223FF38CF0098FF34 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		CAE1EF1C23F12EC60090D140 /* MessageClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,8 +165,11 @@
 		CA4B9E4623D4105000C05DBD /* Erectus */ = {
 			isa = PBXGroup;
 			children = (
+				CAA78BB12406422300A3822D /* OtherClasses */,
+				CAA78BB0240641FB00A3822D /* SocketWorks */,
+				CAA78BAF240641DC00A3822D /* ViewControllers */,
+				CAA78BAE240641C400A3822D /* CellsClases */,
 				CA3AFF8C2401DD25000D9F0F /* sounds */,
-				CA9278FF23F0E7D8000BF2C0 /* Erectus-IOS.db */,
 				CA4B9E7723D4107000C05DBD /* GoogleService-Info.plist */,
 				CA4B9E4723D4105000C05DBD /* AppDelegate.swift */,
 				CA4B9E4923D4105000C05DBD /* SceneDelegate.swift */,
@@ -175,22 +177,7 @@
 				CA4B9E5023D4105400C05DBD /* Assets.xcassets */,
 				CA4B9E5223D4105400C05DBD /* LaunchScreen.storyboard */,
 				CA4B9E5523D4105400C05DBD /* Info.plist */,
-				CA4B9E7B23D4153100C05DBD /* LoginPageController.swift */,
-				CA4B9E7D23D417D400C05DBD /* RegisterController.swift */,
-				CA3169F223E8B0B500C35BD8 /* TestViewController.swift */,
-				CA0E1D0F23E9FD7A006460D1 /* ChatBoardViewController.swift */,
-				CA9278F423F0C87E000BF2C0 /* ChatRoomViewController.swift */,
-				CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */,
-				CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */,
-				CAE1EF1C23F12EC60090D140 /* MessageClass.swift */,
-				CAD46F6B23FD94C60098FF34 /* DownlodaerMessages.swift */,
-				CAD46F6D23FDA8520098FF34 /* SupporterForMessage.swift */,
 				CAD46F6F23FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodeld */,
-				CAD46F7223FF38CF0098FF34 /* MessageModel.swift */,
-				CA3AFF8A24019D9D000D9F0F /* ServerWorker.swift */,
-				CA7F40532404779900EBEA40 /* EntryViewController.swift */,
-				CAA78BA92405B84F00A3822D /* FriendClass.swift */,
-				CAA78BAB2405CED100A3822D /* TabBarViewController.swift */,
 			);
 			path = Erectus;
 			sourceTree = "<group>";
@@ -211,6 +198,49 @@
 				CA4B9E6B23D4105400C05DBD /* Info.plist */,
 			);
 			path = ErectusUITests;
+			sourceTree = "<group>";
+		};
+		CAA78BAE240641C400A3822D /* CellsClases */ = {
+			isa = PBXGroup;
+			children = (
+				CA9278F623F0C895000BF2C0 /* ChatMessagesFrom.swift */,
+				CA9278F823F0C8D0000BF2C0 /* ChatMessagesYour.swift */,
+				CAA78BB2240649FC00A3822D /* FriendCellClass.swift */,
+				CAA78BB624066B3900A3822D /* FriendCellCollection.swift */,
+			);
+			path = CellsClases;
+			sourceTree = "<group>";
+		};
+		CAA78BAF240641DC00A3822D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA4B9E7B23D4153100C05DBD /* LoginPageController.swift */,
+				CA4B9E7D23D417D400C05DBD /* RegisterController.swift */,
+				CA9278F423F0C87E000BF2C0 /* ChatRoomViewController.swift */,
+				CA0E1D0F23E9FD7A006460D1 /* ChatBoardViewController.swift */,
+				CA7F40532404779900EBEA40 /* EntryViewController.swift */,
+				CA3169F223E8B0B500C35BD8 /* TestViewController.swift */,
+				CAA78BB4240666F500A3822D /* ChatBoardCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CAA78BB0240641FB00A3822D /* SocketWorks */ = {
+			isa = PBXGroup;
+			children = (
+				CAA78BAB2405CED100A3822D /* TabBarViewController.swift */,
+				CA3AFF8A24019D9D000D9F0F /* ServerWorker.swift */,
+			);
+			path = SocketWorks;
+			sourceTree = "<group>";
+		};
+		CAA78BB12406422300A3822D /* OtherClasses */ = {
+			isa = PBXGroup;
+			children = (
+				CAA78BA92405B84F00A3822D /* FriendClass.swift */,
+				CAE1EF1C23F12EC60090D140 /* MessageClass.swift */,
+			);
+			path = OtherClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,10 +420,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAD46F6E23FDA8520098FF34 /* SupporterForMessage.swift in Sources */,
 				CA9278F923F0C8D0000BF2C0 /* ChatMessagesYour.swift in Sources */,
 				CA9278F523F0C87E000BF2C0 /* ChatRoomViewController.swift in Sources */,
 				CA7F40542404779900EBEA40 /* EntryViewController.swift in Sources */,
+				CAA78BB724066B3900A3822D /* FriendCellCollection.swift in Sources */,
 				CAA78BAC2405CED100A3822D /* TabBarViewController.swift in Sources */,
 				CAD46F7123FF07B50098FF34 /* CoreDataMessagesModel.xcdatamodeld in Sources */,
 				CA3169F323E8B0B500C35BD8 /* TestViewController.swift in Sources */,
@@ -401,12 +431,12 @@
 				CA4B9E4823D4105000C05DBD /* AppDelegate.swift in Sources */,
 				CA0E1D1023E9FD7A006460D1 /* ChatBoardViewController.swift in Sources */,
 				CA9278F723F0C895000BF2C0 /* ChatMessagesFrom.swift in Sources */,
-				CAD46F7323FF38CF0098FF34 /* MessageModel.swift in Sources */,
 				CA4B9E4A23D4105000C05DBD /* SceneDelegate.swift in Sources */,
 				CAE1EF1D23F12EC60090D140 /* MessageClass.swift in Sources */,
-				CAD46F6C23FD94C60098FF34 /* DownlodaerMessages.swift in Sources */,
 				CA3AFF8B24019D9D000D9F0F /* ServerWorker.swift in Sources */,
 				CA4B9E7C23D4153100C05DBD /* LoginPageController.swift in Sources */,
+				CAA78BB5240666F500A3822D /* ChatBoardCollectionViewController.swift in Sources */,
+				CAA78BB3240649FC00A3822D /* FriendCellClass.swift in Sources */,
 				CAA78BAA2405B84F00A3822D /* FriendClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

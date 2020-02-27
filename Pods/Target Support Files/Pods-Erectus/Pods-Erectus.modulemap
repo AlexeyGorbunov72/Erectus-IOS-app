@@ -1,0 +1,6 @@
+framework module Pods_Erectus {
+  umbrella header "Pods-Erectus-umbrella.h"
+
+  export *
+  module * { export * }
+}
