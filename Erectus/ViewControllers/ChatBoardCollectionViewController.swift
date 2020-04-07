@@ -16,7 +16,6 @@ class ChatBoardCollectionViewController: UICollectionViewController, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         getData()
         navigationItem.title = "Хуесосы бля"
         collectionView.alwaysBounceVertical = true
@@ -65,7 +64,6 @@ class ChatBoardCollectionViewController: UICollectionViewController, UICollectio
                 createTestPerson()
             }
             for date in result as! [NSManagedObject]{
-                print("блять")
                 print(date.value(forKey: "chatID"))
                 if date.value(forKey: "dateTimeLastMessage") == nil{
                     continue
@@ -76,7 +74,50 @@ class ChatBoardCollectionViewController: UICollectionViewController, UICollectio
         }
         
         }
+    func getData_(){
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Friend")
+    request.returnsObjectsAsFaults = false
+    request.sortDescriptors = [NSSortDescriptor(key: "dateTimeLastMessage", ascending: true)]
+    do{
+        
+        let result = try! context.fetch(request)
+        if result.count == 0{
+            createTestPerson()
+        }
+        for date in result as! [NSManagedObject]{
+            print(date.value(forKey: "chatID"))
+            if date.value(forKey: "dateTimeLastMessage") == nil{
+                continue
+            }
+            print(date.value(forKey: "nickname"))
+            self.usersInChatBoard += [FriendItem.init(chatId_: date.value(forKey: "chatID") as! String, lastMessage_: "HUI", countOfUnreadMessages_: 1, dataTimeLastMessage_: date.value(forKey: "dateTimeLastMessage") as! Date, nickname_: date.value(forKey: "nickname") as! String)]
+        }
+    }
     
+    }
+    func getData__(){
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Friend")
+    request.returnsObjectsAsFaults = false
+    request.sortDescriptors = [NSSortDescriptor(key: "dateTimeLastMessage", ascending: true)]
+    do{
+        
+        let result = try! context.fetch(request)
+        if result.count == 0{
+            createTestPerson()
+        }
+        for date in result as! [NSManagedObject]{
+            print(date.value(forKey: "chatID"))
+            if date.value(forKey: "dateTimeLastMessage") == nil{
+                continue
+            }
+            print(date.value(forKey: "nickname"))
+            self.usersInChatBoard += [FriendItem.init(chatId_: date.value(forKey: "chatID") as! String, lastMessage_: "HUI", countOfUnreadMessages_: 1, dataTimeLastMessage_: date.value(forKey: "dateTimeLastMessage") as! Date, nickname_: date.value(forKey: "nickname") as! String)]
+        }
+    }
+    
+    }
     func createTestPerson(){
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let persons_ = NSEntityDescription.entity(forEntityName: "Friend", in: context)
